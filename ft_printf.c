@@ -1,9 +1,10 @@
 
 #include "libprintf.h"
-#include "libft.h"
 int ft_printf(const char *format,...)
 {
+    int count;
     int i;
+    count = 0;
     va_list args;
     va_start(args,format);
     i = 0;
@@ -14,23 +15,26 @@ int ft_printf(const char *format,...)
             i++;
             if(format[i] == 'd' || format[i] == 'i')
             {
-                ft_putnbr(va_arg(args,int));
+                count += ft_putnbr(va_arg(args,int));
             }
             if(format[i] == 'x' || format[i] == 'X')
-                ft_puthex(va_arg(args,int));
+                count += ft_puthex(va_arg(args,int),format[i]);
             i++;
         }
         else
         {
         ft_putchar_fd(format[i],1);
+        count++;
         i++;
         }
     }
-    return 1;
+    return count;
 }
 int main(int ac ,char **av)
 {
-    ft_printf(av[1],ft_atoi(av[2]),ft_atoi(av[3]));
-        ft_putchar_fd('\n',1);
-    printf(av[1],ft_atoi(av[2]),ft_atoi(av[3]));
+    int count = ft_printf(av[1],ft_atoi(av[2]),ft_atoi(av[3]));
+    printf("\n");
+    int count2 = printf(av[1],ft_atoi(av[2]),ft_atoi(av[3]));
+    printf("dyali == %d \n",count);
+    printf("dyalhom == %d \n",count2);
 }
