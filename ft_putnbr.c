@@ -1,12 +1,5 @@
 #include "libprintf.h"
 
-
-static int ft_putchar(char c)
-{
-    write(1,&c,1);
-    return (1);
-}
-
 static int	get_size(long n)
 {
 	int	i;
