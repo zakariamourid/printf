@@ -5,10 +5,11 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include "libft/libft.h" 
 
 int	ft_printf(const char *format, ...);
 int	ft_putnbr(int n);
 int	ft_putstr(char *s);
 int	ft_putchar(char c);
-int	ft_puthex(int n, char c);
+int	ft_puthex(unsigned int  n, char c);
 #endif

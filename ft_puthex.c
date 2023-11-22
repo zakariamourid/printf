@@ -20,7 +20,7 @@ void rev_str(char *s)
 		write(1,&s[len],1);
 	}
 }
-int	ft_puthex(int n,char c)
+int	ft_puthex(unsigned int n,char c)
 {
 	long nbr;
 	int i;
@@ -44,5 +44,5 @@ int	ft_puthex(int n,char c)
 	result[i++] = base[nbr];
 	result[i] = 0;
 	rev_str(result);
-	return(strlen(result));
+	return(ft_strlen(result));
 }

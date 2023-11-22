@@ -1,6 +1,6 @@
 
-#include "libft.h"
 #include "libprintf.h"
+#include "libft/libft.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -26,6 +26,10 @@ int	ft_printf(const char *format, ...)
 			}
 			if (format[i] == 'x' || format[i] == 'X')
 				count += ft_puthex(va_arg(args, int), format[i]);
+			if(format[i] == 'p')
+				count += ft_putstr("0x");
+				count += ft_puthex(va_arg(args, void *), format[i]);
+
 			i++;
 		}
 		else
@@ -36,12 +40,4 @@ int	ft_printf(const char *format, ...)
 		}
 	}
 	return (count);
-}
-int	main(int ac, char **av)
-{
-	int count = ft_printf(av[1], ft_atoi(av[2]),av[3]);
-	printf("\n");
-	int count2 = printf(av[1], ft_atoi(av[2]),av[3]);
-	printf("dyali == %d \n", count);
-	printf("dyalhom == %d \n", count2);
 }
