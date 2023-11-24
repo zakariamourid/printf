@@ -18,7 +18,9 @@ int	ft_putaddress(unsigned long n)
 	i = 0;
 	count = 0;
 	base = "0123456789abcdef";
-	while(n > 16)
+    if (!n)
+        return(ft_putstr("0x0"));
+    while(n > 16)
 	{
 		result[i++] = base[n % 16];
 		n = n / 16;

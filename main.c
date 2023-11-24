@@ -43,4 +43,30 @@ int main() {
     printf("\n");
     printf("Your printf count for %X: %d\n", hex_num_upper, count_X);
     printf("Standard printf count for %X: %d\n\n", hex_num_upper, count2_X);
-    printf("##")
+    printf("---%d",printf("c in null =%c",NULL));
+    printf("\n");
+    printf("---%d",printf("s in null =%s",NULL));
+    printf("\n");
+    printf("---%d",printf("p in null =%p",NULL));
+    printf("\n");
+    printf("---%d",printf("d in null =%d",NULL));
+    printf("\n");
+    printf("---%d",printf("i in null =%i",NULL));
+    printf("\n");
+    printf("---%d",printf("u in null =%u",NULL));
+    printf("\n");
+    printf("---%d",printf("x in null =%x",NULL));
+    printf("\n");
+    printf("---%d",printf("%X in null =%X",NULL));
+    printf("\n");
+}
+
+// linux ==>
+// c in null =---12
+// s in null =(null)---17
+// p in null =(nil)---16
+// d in null =0---12
+// i in null =0---12
+// u in null =0---12
+// x in null =0---12
+// 0 in null =1---12
