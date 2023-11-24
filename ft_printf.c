@@ -1,9 +1,13 @@
 
-#include "libftprintf.h"
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 static void check_format(const char *format,va_list *args,int *count,int i)
 {
+	if(format[i] == 0)
+	{
+		printf("ha ana == %d \n",format[i]);
+		return ;
+	}
 	if(format[i] == 'c')
 		*count += ft_putchar(va_arg(*args,int));
 	if(format[i] == 's')
@@ -15,7 +19,7 @@ static void check_format(const char *format,va_list *args,int *count,int i)
 	if (format[i] == 'u')
 		*count += ft_putnbr_unsigned(va_arg(*args,unsigned int));
 	if (format[i] == 'x' || format[i] == 'X')
-		*count += ft_puthex(va_arg(*args, unsigned long), format[i]);
+		*count += ft_puthex(va_arg(*args, unsigned int), format[i]);
 	if (format[i] == '%')
 		*count += ft_putchar('%');
 }
@@ -34,8 +38,11 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if(format[i]!= 0)
+			{
 			check_format(format,&args,&count,i);
 			i++;
+			}
 		}
 		else
 		{

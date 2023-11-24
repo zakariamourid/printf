@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static void  rev_str(char *s)
 {
@@ -11,7 +11,7 @@ static void  rev_str(char *s)
 }
 int	ft_putaddress(unsigned long n)
 {
-	int i;
+	size_t i;
 	int count;
 	char *base;
 	char result[32];

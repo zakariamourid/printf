@@ -1,6 +1,6 @@
 {
-    "cmake.configureOnOpen": false,
     "files.associations": {
-        "libftprintf.h": "c"
+        "*.embeddedhtml": "html",
+        "unistd.h": "c"
     }
 }

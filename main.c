@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 int main() {
 //     char c = 'A';
 //     int count_c = ft_printf("Character = %c", c);
@@ -79,8 +79,10 @@ int main() {
 //  printf("---%d",printf("%% in null =%%",NULL));
 //  printf("\n");
 
-	printf("pf ==%x",(unsigned long) -1);
-	ft_printf("ft ==%x",(unsigned long) -1);
+//int a = printf("fhgdhdfgh %");
+int b = ft_printf("%p",NULL);
+ft_printf("\n");
+ft_printf("b =%d\n",b);
 	//ft_printf("%X", -10);
 }
 

@@ -9,7 +9,7 @@
 /*   Updated: 2023/11/17 02:48:58 by zmourid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libftprintf.h"
+#include "ft_printf.h"
 static void rev_str(char *s)
 {
 	int len;
@@ -21,7 +21,7 @@ static void rev_str(char *s)
 }
 int	ft_puthex(unsigned int  nb,char c)
 {
-	int i;
+	size_t i;
 	char *base;
 	long nbr;
 	nbr = nb;
