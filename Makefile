@@ -3,7 +3,7 @@ CFLAGS = -Wall -Werror -Wextra
 NAME = libprintf.a
 LIBFT_DIR = libft
 LIBFT = libft.a
-CFILES = ft_puthex.c ft_printf.c ft_putstr.c ft_putnbr.c ft_putchar.c
+CFILES = ft_puthex.c ft_printf.c ft_putstr.c ft_putnbr.c ft_putchar.c ft_putaddress.c ft_putnbr_unsigned.c
 
 # Add the missing source files that contribute to libft
 LIBFT_SRCS = $(LIBFT_DIR)/ft_strlen.c

@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 #include "libprintf.h"
 #include <string.h>
-void rev_str(char *s)
+static void rev_str(char *s)
 {
 	int len;
-	len = strlen(s);
+	len = ft_strlen(s);
 	while(len--)
 	{
 		write(1,&s[len],1);
@@ -38,5 +38,5 @@ int	ft_puthex(unsigned long  long  nbr,char c)
 	result[i++] = base[nbr];
 	result[i] = 0;
 	rev_str(result);
-	return(strlen(result));
+	return(ft_strlen(result));
 }
