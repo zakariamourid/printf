@@ -21,15 +21,14 @@ int	ft_printf(const char *format, ...)
             if(format[i] == 's')
                 count += ft_putstr(va_arg(args,char *));
 			if (format[i] == 'd' || format[i] == 'i')
-			{
 				count += ft_putnbr(va_arg(args, int));
-			}
 			if (format[i] == 'x' || format[i] == 'X')
-				count += ft_puthex(va_arg(args, int), format[i]);
+				count += ft_puthex(va_arg(args, unsigned long), format[i]);
 			if(format[i] == 'p')
+			{
 				count += ft_putstr("0x");
-				count += ft_puthex(va_arg(args, void *), format[i]);
-
+				count += ft_puthex(va_arg(args, int), format[i]);
+			}
 			i++;
 		}
 		else

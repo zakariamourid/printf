@@ -20,19 +20,13 @@ void rev_str(char *s)
 		write(1,&s[len],1);
 	}
 }
-int	ft_puthex(unsigned int n,char c)
+int	ft_puthex(unsigned long  long  nbr,char c)
 {
-	long nbr;
+	
 	int i;
 	char *base;
 	char result[100];
-	nbr = n;
 	i = 0;
-	if(nbr < 0)
-	{
-		result[i] = '-';
-		nbr = -nbr;
-	}
 	base = "0123456789abcdef";
 	if(c == 'X')
 		base="0123456789ABCDEF";
@@ -44,5 +38,5 @@ int	ft_puthex(unsigned int n,char c)
 	result[i++] = base[nbr];
 	result[i] = 0;
 	rev_str(result);
-	return(ft_strlen(result));
+	return(strlen(result));
 }
