@@ -77,6 +77,15 @@ printf("-----------------original--------------------\n");
  printf("\n");
  printf("---%d",printf("X in null =%X",NULL));
  printf("\n");
+ printf("---%d",printf("%% in null =%%",NULL));
+ printf("\n");
+ ft_printf("nothing test for all=== ");
+ ft_printf("char = %c,str=%s,p=%p,d=%d,i=%i,u=%u,x=%x,X=%x \n");
+ printf("nothing test for all=== ");
+ printf("char = %c,str=%s,p=%p,d=%d,i=%i,u=%u,x=%x,X=%x");
+ printf("\n");
+ ft_printf("hello ft");
+ printf("hello");
 }
 
 // linux ==>
