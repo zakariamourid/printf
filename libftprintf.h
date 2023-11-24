@@ -1,5 +1,5 @@
-#ifndef LIBPRINTF_H
-# define LIBPRINTF_H
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
 # include <stdarg.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -10,8 +10,8 @@
 int	ft_printf(const char *format, ...);
 int	ft_putnbr(int n);
 int	ft_putstr(char *s);
-int	ft_putchar(char c);
-int	ft_puthex(unsigned long long n, char c);
+int	ft_putchar(int c);
+int	ft_puthex(unsigned int nb, char c);
 int	ft_putaddress(unsigned long n);
 int	ft_putnbr_unsigned(unsigned int  n);
 #endif

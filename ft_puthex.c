@@ -9,8 +9,7 @@
 /*   Updated: 2023/11/17 02:48:58 by zmourid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libprintf.h"
-#include <string.h>
+#include "libftprintf.h"
 static void rev_str(char *s)
 {
 	int len;
@@ -20,18 +19,20 @@ static void rev_str(char *s)
 		write(1,&s[len],1);
 	}
 }
-int	ft_puthex(unsigned long  long  nbr,char c)
+int	ft_puthex(unsigned int  nb,char c)
 {
-	
 	int i;
 	char *base;
-	char result[100];
+	long nbr;
+	nbr = nb;
+	char result[32];
 	i = 0;
 	base = "0123456789abcdef";
 	if(c == 'X')
 		base="0123456789ABCDEF";
-	while(nbr > 16)
+	while(nbr >= 16)
 	{
+
 		result[i++] = base[nbr % 16];
 		nbr = nbr / 16;
 	}

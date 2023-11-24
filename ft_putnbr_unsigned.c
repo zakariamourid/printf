@@ -1,15 +1,10 @@
-#include "libprintf.h"
+#include "libftprintf.h"
 
-static int	get_size(long n)
+static int	get_size(unsigned long n)
 {
 	int	i;
 
 	i = 1;
-	if (n < 0)
-	{
-		n = -n;
-		i++;
-	}
 	while (n / 10)
 	{
 		i++;
@@ -21,9 +16,11 @@ static int	get_size(long n)
 int	ft_putnbr_unsigned(unsigned int  n)
 {
     int count;
-	long	nb;
+	unsigned long	nb;
 	nb = n;
-    count = get_size(nb);
+	if(n == 0)
+		return (ft_putchar('0'));
+	count = get_size(n);
 	if (nb < 10)
 	{
 		nb += 48;
@@ -31,8 +28,13 @@ int	ft_putnbr_unsigned(unsigned int  n)
 	}
 	else
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		ft_putnbr_unsigned(nb / 10);
+		ft_putnbr_unsigned(nb % 10);
 	}
     return (count);
 }
+// int main()
+// {
+// 	printf("len == %d ,, res = %u",get_size((unsigned int)2),(unsigned int)2);
+// 	printf("len == %d ,, res = %u",ft_putnbr_unsigned((unsigned int)2),(unsigned int)2);
+// }

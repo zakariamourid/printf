@@ -1,6 +1,6 @@
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
-NAME = libprintf.a
+NAME = libftprintf.a
 LIBFT_DIR = libft
 LIBFT = libft.a
 CFILES = ft_puthex.c ft_printf.c ft_putstr.c ft_putnbr.c ft_putchar.c ft_putaddress.c ft_putnbr_unsigned.c
