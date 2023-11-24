@@ -58,7 +58,6 @@ int main() {
     ft_printf("\n");
     ft_printf("---%d",ft_printf("X in null =%X",NULL));
     ft_printf("\n");
-   printf(NULL);
 
 printf("-----------------original--------------------\n");
  printf("---%d",printf("c in null =%c",NULL));
@@ -98,7 +97,7 @@ printf("-----------------original--------------------\n");
 // x in null =0---12
 // X in null =1---12
 
-// -----------------original--------------------
+// -----------------linux--------------------
 // c in null =---12
 // s in null =(null)---17
 // p in null =(nil)---16
@@ -108,3 +107,21 @@ printf("-----------------original--------------------\n");
 // x in null =0---12
 // X in null =0---12
 
+// -----------------mac os --------------------
+// c in null =---12
+// s in null =(null)---17
+// p in null =0x0---14
+// d in null =0---12
+// i in null =0---12
+// u in null =0---12
+// x in null =0---12
+// X in null =0---12
+// -------------mine ---------------
+// c in null =---12
+// s in null =(NULL)---17
+// p in null =0x0---14
+// d in null =0---12
+// i in null =0---12
+// u in null =0---12
+// x in null =0---12
+// X in null =0---12
