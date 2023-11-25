@@ -80,9 +80,13 @@ int main() {
 //  printf("\n");
 
 //int a = printf("fhgdhdfgh %");
-int b = ft_printf("%p",NULL);
+int b = ft_printf("%m %");
 ft_printf("\n");
 ft_printf("b =%d\n",b);
+fflush(stdout);
+int c = printf("%m %");
+printf("\n");
+printf("c =%d\n",c);
 	//ft_printf("%X", -10);
 }
 

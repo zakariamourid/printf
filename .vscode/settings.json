@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.embeddedhtml": "html",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "__config": "cpp"
     }
 }

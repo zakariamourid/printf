@@ -1,13 +1,25 @@
 
 #include "ft_printf.h"
 
+static char	*ft_strchr(const char *s, int c)
+{
+	size_t	i;
+
+	i = 0;
+	if ((char)c == '\0')
+		return ((char *)s + ft_strlen(s));
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i++;
+	}
+	return (NULL);
+}
 static void check_format(const char *format,va_list *args,int *count,int i)
 {
-	if(format[i] == 0)
+	if(ft_strchr("cspdiuxX%",format[i]) )
 	{
-		printf("ha ana == %d \n",format[i]);
-		return ;
-	}
 	if(format[i] == 'c')
 		*count += ft_putchar(va_arg(*args,int));
 	if(format[i] == 's')
@@ -22,6 +34,11 @@ static void check_format(const char *format,va_list *args,int *count,int i)
 		*count += ft_puthex(va_arg(*args, unsigned int), format[i]);
 	if (format[i] == '%')
 		*count += ft_putchar('%');
+	}
+	else
+	{
+		*count += ft_putchar(format[i]);
+	}
 }
 
 int	ft_printf(const char *format, ...)
