@@ -6,9 +6,11 @@
 /*   By: zmourid <zmourid@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 02:44:56 by zmourid           #+#    #+#             */
-/*   Updated: 2023/11/25 14:00:47 by zmourid          ###   ########.fr       */
+/*   Updated: 2023/11/25 14:07:33 by zmourid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 static void	rev_str(char *s)
 {

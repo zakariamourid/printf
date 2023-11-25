@@ -6,14 +6,13 @@
 /*   By: zmourid <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 13:56:49 by zmourid           #+#    #+#             */
-/*   Updated: 2023/11/25 13:56:51 by zmourid          ###   ########.fr       */
+/*   Updated: 2023/11/25 14:07:42 by zmourid          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
